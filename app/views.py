@@ -1,4 +1,4 @@
-from BingCloudSearch import CloudySearch
+from bing_cloud_search import CloudySearch
 from flask import render_template, redirect, session
 from config import BINGAPI
 
