@@ -1,4 +1,3 @@
 bing_cloud_search
 flask
 gunicorn
-pip freeze
