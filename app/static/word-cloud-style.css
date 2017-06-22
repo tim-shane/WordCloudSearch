@@ -1,0 +1,123 @@
+#logo{
+    width: 500px;
+    margin:auto;
+    display: block;
+    position: relative;
+}
+#content{
+    width: 500px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#loading{
+    display:none;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    margin:auto;
+    background: #00c3ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#loading img{
+    display:block;
+    margin:auto;
+    margin-top: 10%;
+}
+body {
+    background: #00c3ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+p {
+    width: 100%;
+}
+.boldwhite{
+    font-family:"Impact";
+    color:white;
+}
+.word-cloud-form{
+    max-width: 500px;
+    padding: 20px 12px 10px 20px;
+    font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-2-heading{
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+.word-cloud-form label{
+    display: block;
+    margin: 0px 0px 15px 0px;
+}
+.word-cloud-form label > span{
+    width: 100px;
+    font-weight: bold;
+    float: left;
+    padding-top: 8px;
+    padding-right: 5px;
+}
+.word-cloud-form span.required{
+    color:red;
+}
+.word-cloud-form .tel-number-field{
+    width: 40px;
+    text-align: center;
+}
+.word-cloud-form input.input-field{
+    line-height:15px;
+
+
+}
+
+.word-cloud-form input.input-field,
+.word-cloud-form .tel-number-field,
+.word-cloud-form .textarea-field,
+ .word-cloud-form .select-field{
+    line-height:15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+.word-cloud-form .input-field:focus,
+.word-cloud-form .tel-number-field:focus,
+.word-cloud-form .textarea-field:focus,
+.word-cloud-form .select-field:focus{
+    border: 1px solid #0C0;
+}
+.word-cloud-form .textarea-field{
+    height:100px;
+    width: 65%;
+}
+.word-cloud-form input[type=submit],
+.word-cloud-form input[type=button]{
+    width: 100%;
+    text-align: center;
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #00c3ff;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.word-cloud-form input[type=submit]:hover,
+.word-cloud-form input[type=button]:hover{
+    background: #00c3ff;
+    color: #fff;
+}

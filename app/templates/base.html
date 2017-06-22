@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="static/word-cloud-style.css">
+        <meta charset="UTF-8">
+        {% if title %}
+        <title>{{ title }} - Cloudy Search</title>
+        {% else %}
+        <title>Welcome to Cloudy Search</title>
+        {% endif %}
+
+
+    </head>
+    <body>
+        <div id="logo"><a href="/search"><p style="text-align: center"><img src="static/cloudysearch.gif" alt="Cloud Search"></p></a></div>
+
+        {% block content %}{% endblock %}
+    </body>
+</html>

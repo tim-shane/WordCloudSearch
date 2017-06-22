@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="content"><h1 class="boldwhite">Generate a WordCloud</h1>
+        <div id="loading"><img src="static/loading.gif"></div>
+        <div class="word-cloud-form">
+        <script>
+            function loadingShow(){
+                    var x = document.getElementById('loading');
+                    x.style.display = 'block';
+            }
+        </script>
+        <form action="/search" method="POST" name="search">
+            {{ form.hidden_tag() }}
+            <p>
+                Please enter a search term:<br>
+                {{ form.searchstring(size=62) }}<br>
+                {% for error in form.searchstring.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}<br>
+                Optional: Add an image modifier.<br> (Try vector or illustration out. This edits the image without affecting the words in the cloud.)<br>
+                {{ form.searchmodifier(size=62) }}<br>
+            </p>
+            <p><input type="submit" onclick="return loadingShow();" value="Make WordCloud"></p>
+        </form>
+        </div>
+    </div>
+{% endblock %}
