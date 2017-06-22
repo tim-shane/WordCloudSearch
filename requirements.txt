@@ -1,5 +1,2 @@
 bing_cloud_search
 flask
-wordcloud
-matplotlib
-py_ms_cognitive
