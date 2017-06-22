@@ -1,7 +1,6 @@
 from bing_cloud_search import CloudySearch
 from flask import render_template, redirect, session, Flask
 from config import BINGAPI, save_image_location
-
 from app import app
 from .forms import SearchForm
 
@@ -20,8 +19,6 @@ def search():
     return render_template('search.html',
                            title='Search',
                            form=form)
-if __name__ == "__main__":
-    application.run(host='0.0.0.0')
 
 @app.route('/index', methods=['GET', 'POST'])
 def index():
