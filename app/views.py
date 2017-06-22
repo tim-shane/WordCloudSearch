@@ -1,6 +1,6 @@
 from bing_cloud_search import CloudySearch
 from flask import render_template, redirect, session
-from config import BINGAPI
+from config import BINGAPI, save_image_location
 
 from app import app
 from .forms import SearchForm
@@ -12,7 +12,7 @@ def search():
     form = SearchForm()
     if form.validate_on_submit():
         img = CloudySearch(BINGAPI, form.searchstring.data, form.searchmodifier.data).create_cloud()
-        img.savefig('C:\\Users\\Tim\\PycharmProjects\\CloudWordWeb\\app\static\\' + form.searchstring.data)
+        img.savefig(save_image_location + form.searchstring.data)
         session['searchterm'] = form.searchstring.data
         return redirect('/index'),
     return render_template('search.html',
