@@ -1,6 +1,6 @@
 from BingCloudSearch import CloudySearch
 from flask import render_template, redirect, session
-from ignore.config import BINGAPI
+from config import BINGAPI
 
 from app import app
 from .forms import SearchForm
