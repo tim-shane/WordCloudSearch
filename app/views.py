@@ -1,8 +1,9 @@
 from bing_cloud_search import CloudySearch
-from flask import render_template, redirect, session, Flask
+from flask import render_template, redirect, session, Flask, flash
 from config import BINGAPI, save_image_location
 from app import app
 from .forms import SearchForm
+from urllib.error import URLError
 
 application = Flask(__name__)
 
@@ -12,10 +13,15 @@ application = Flask(__name__)
 def search():
     form = SearchForm()
     if form.validate_on_submit():
-        img = CloudySearch(BINGAPI, form.searchstring.data, form.searchmodifier.data).create_cloud()
-        img.savefig(save_image_location + form.searchstring.data + ".png")
         session['searchterm'] = form.searchstring.data
-        return redirect('/index'),
+        try:
+            img = CloudySearch(BINGAPI, form.searchstring.data, form.searchmodifier.data).create_cloud()
+            img.savefig(save_image_location + form.searchstring.data + ".png")
+            return redirect('/index')
+        except URLError as e:
+            flash("Crazy server error. Literally insane.")
+            print("%s" % e)
+            return redirect('/search')
     return render_template('search.html',
                            title='Search',
                            form=form)
