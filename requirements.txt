@@ -1,3 +1,5 @@
 bing_cloud_search
 flask
 gunicorn
+flask_wtf
+wtforms

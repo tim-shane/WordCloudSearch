@@ -13,7 +13,7 @@ def search():
     form = SearchForm()
     if form.validate_on_submit():
         img = CloudySearch(BINGAPI, form.searchstring.data, form.searchmodifier.data).create_cloud()
-        img.savefig(save_image_location + form.searchstring.data)
+        img.savefig(save_image_location + form.searchstring.data + ".png")
         session['searchterm'] = form.searchstring.data
         return redirect('/index'),
     return render_template('search.html',
