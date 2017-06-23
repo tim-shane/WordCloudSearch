@@ -17,6 +17,8 @@ def search():
         try:
             img = CloudySearch(BINGAPI, form.searchstring.data, form.searchmodifier.data).create_cloud()
             img.savefig(save_image_location + form.searchstring.data + ".png")
+            print('Searching for: ' + form.searchstring.data + "(" + form.searchmodifier.data
+                  + ")")
             return redirect('/index')
         except URLError as e:
             flash("Crazy server error. Literally insane.")
@@ -29,7 +31,7 @@ def search():
 @app.route('/index', methods=['GET', 'POST'])
 def index():
     img = 'static/' + session['searchterm'] + ".png"
-
+    print("Serving" + session['searchterm'] + ".png")
     return render_template('index.html',
                            title='Home',
                            img=img)
