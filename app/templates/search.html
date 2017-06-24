@@ -3,11 +3,13 @@
 {% block content %}
     <div id="content"><h1 class="boldwhite">Generate a WordCloud</h1>
         <div id="loading"><img src="static/loading.gif"></div>
-        <div class="word-cloud-form">
+        <div class="word-cloud-form" id="word-cloud-form">
         <script>
             function loadingShow(){
                     var x = document.getElementById('loading');
+                    var y = document.getElementById('word-cloud-form');
                     x.style.display = 'block';
+                    y.style.display = 'none';
             }
         </script>
         <form action="/search" method="POST" name="search">

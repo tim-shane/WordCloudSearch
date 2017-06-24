@@ -31,7 +31,7 @@ def search():
 @app.route('/index', methods=['GET', 'POST'])
 def index():
     img = 'static/' + session['searchterm'] + ".png"
-    print("Serving" + session['searchterm'] + ".png")
+    print("Serving " + session['searchterm'] + ".png")
     return render_template('index.html',
                            title='Home',
                            img=img)

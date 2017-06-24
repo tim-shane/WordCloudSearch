@@ -1,33 +1,78 @@
 #logo{
-    width: 500px;
+    width:100%;
+	font-size: 24px;
+	font-family: 'Press Start 2P', cursive;
+    background: #00c3ff;
+	background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff);
+    background: linear-gradient(to right, #ffff1c, #00c3ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
     margin:auto;
     display: block;
-    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: #C2C2C2;
+    position:absolute;
 }
 #content{
-    width: 500px;
+    width: 600px;
     margin-left:auto;
     margin-right:auto;
 }
+#content img{
+    margin:auto;
+    display: block;
+}
+#go-back{
+    display:block;
+    margin:auto;
+    width:500px;
+    font-size: 24px;
+	font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #00c3ff;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    text-decoration:none;
+}
+#go-back a{
+    text-decoration: none;
+    color: white;
+}
+
+#go-back a:hover{
+    text-decoration: none;
+    color: #ffff1c;
+}
+
 #loading{
     display:none;
     position: absolute;
-    width: 500px;
+    width: 600px;
     height: 500px;
     margin:auto;
-    background: #00c3ff; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: #00c3ff; !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff); !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to right, #ffff1c, #00c3ff); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 }
 #loading img{
     display:block;
-    margin:auto;
+    margin-left: 45%;
+    margin-right: 45%;
     margin-top: 10%;
 }
 body {
-    background: #00c3ff; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: #00c3ff; !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff); !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to right, #ffff1c, #00c3ff); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 }
 p {
     width: 100%;
@@ -37,7 +82,7 @@ p {
     color:white;
 }
 .word-cloud-form{
-    max-width: 500px;
+    max-width: 600px;
     padding: 20px 12px 10px 20px;
     font: 13px Arial, Helvetica, sans-serif;
 }
@@ -103,6 +148,8 @@ p {
 }
 .word-cloud-form input[type=submit],
 .word-cloud-form input[type=button]{
+    font-size: 24px;
+	font-family: 'Press Start 2P', cursive;
     width: 100%;
     text-align: center;
     border: none;
